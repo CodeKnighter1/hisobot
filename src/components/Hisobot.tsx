@@ -25,7 +25,7 @@ const Hisobot = () => {
             url: "https://www.instagram.com/kochma.dokon/?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw%3D%3D#"
         },
         {
-            title: "Konteyner City Instagrami",
+            title: "Kontainer City Instagrami",
             url: "https://www.instagram.com/kontainer_city.uz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
         }
     ];
@@ -178,7 +178,7 @@ const Hisobot = () => {
                                 BIZNING FAOLIYATIMIZ BILAN TANISHIB CHIQING
                             </SectionHeader>
                             <div className="text-center p-4 text-white">
-                                <h3 className="font-medium text-lg text-left flex gap-1">IJTIMOIY TARMOQLARIMIZ. <img src={icon} alt="" className="w-7 h-7" /> </h3>
+                                <h3 className="font-medium text-md sm:text-lg text-left flex gap-1">IJTIMOIY TARMOQLARIMIZ. <img src={icon} alt="" className="w-7 h-7" /> </h3>
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                 {socialLinks.map((link, index) => (
