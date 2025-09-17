@@ -1,9 +1,10 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { LocateIcon, LocationEdit } from "lucide-react";
+import { Info, LocateIcon, LocationEdit } from "lucide-react";
 import icon8l from '@/images/icons8-location-48.png'
 import icom8 from '@/images/icons8-location-32.png'
 import icon from '@/images/icons8-instagram-48.png'
 import icond from '@/images/icons8-dollar-40.png'
+import down from '@/images/icons8-down-100.png'
 
 const Hisobot = () => {
     // Reusable data structures
@@ -29,6 +30,7 @@ const Hisobot = () => {
             url: "https://www.instagram.com/kontainer_city.uz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
         }
     ];
+
 
     const SectionHeader = ({ children, className = "" }) => (
         <h2 className={`text-2xl md:text-3xl lg:text-4xl font-serif text-center mb-6 md:mb-8 ${className}`}>
@@ -58,11 +60,11 @@ const Hisobot = () => {
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
                         <div className="relative z-10 text-center py-8 md:py-16">
                             <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif leading-tight mb-4 bg-gradient-to-r from-yellow-300 via-yellow-100 to-yellow-300 bg-clip-text text-transparent">
-                                HAMKORLIK TIJORAT TAKLIFI
+                                HAMKORLIK  TIJORAT TAKLIFI
                             </h1>
                             <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-emerald-400 mx-auto mb-6"></div>
                             <p className="text-xl md:text-2xl lg:text-3xl font-serif font-light">
-                                BIRINCHI VA YAGONA KO'CHMA DO'KONLAR FABRIKASI
+                                BIRINCHI VA YAGONA <br /> "KO'CHMA DO'KON" LAR <br /> FABRIKASI
                             </p>
                         </div>
                     </CardHeader>
@@ -78,7 +80,7 @@ const Hisobot = () => {
                             </div>
                             <div className="space-y-4 text-base md:text-lg leading-relaxed">
                                 <p className="text-center">
-                                    Yengil konstruksiyadan iborat bo'lgan ko'chma do'kon, ofis savdo do'konlari, kapsula, konteyner, foodtruck va modul uylar ishlab chiqariladi.
+                                    Yengil konstruksiyadan iborat. <br />  Ko'chma do'kon - savdo va xizmat ko'rsatish shahobchalari - kiyoskalar - kapsula do'kon - konteyner - foodtruck va modul uylar - ishlab chiqarish.
                                 </p>
                             </div>
                         </InfoCard>
@@ -105,7 +107,7 @@ const Hisobot = () => {
                                 </div>
                                 <div className="bg-teal-600/50 rounded-lg p-4">
                                     <div>
-                                        <h3 className="font-bold text-yellow-300 mb-2">SHARTNOMA NAMUNASI BILAN TANISHIB CHIQING!</h3>
+                                        <h3 className="text-yellow-300 italic mb-2">Shartnoma namunasi bilan tanishib chiqish uchun pastdagi " NAMUNA " tugmasini bosing </h3>
                                     </div>
                                     <div className="space-y-4 text-center">
                                         <a
@@ -148,7 +150,7 @@ const Hisobot = () => {
                         {/* Investment Returns */}
                         <InfoCard>
                             <SectionHeader className="text-yellow-300">
-                                QISMAN SHERIKLIK <span className="flex text-center justify-center gap-1">DAROMADI <img src={icond} alt="" className="w-6 h-6" /></span> 
+                                QISMAN SHERIKLIK <span className="flex text-center justify-center gap-1">DAROMADI <img src={icond} alt="" className="w-6 h-6" /></span>
                             </SectionHeader>
                             <div className="text-center mb-8">
                                 <div className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-6 py-3 rounded-full font-bold text-lg md:text-xl">
@@ -163,14 +165,24 @@ const Hisobot = () => {
                             </div>
                         </InfoCard>
 
-                        {/* <InfoCard>
-                            <SectionHeader>
-                                TA'MINOTCHI
+                        <InfoCard>
+                            <SectionHeader className="text-yellow-300">
+                                SAVOL - JAVOBLAR
                             </SectionHeader>
                             <div>
-                                <h1>Bizning fabrikamizga kerak bo'lgan material bilan ta'minlab berasiz va shundan sizga % beramiz. Kelishilingan holda.</h1>
+                                <h1>Barcha savollaringizga shu tugmani bosish orqali javob topishingiz mumkin</h1>
+                                <div className="flex justify-center mt-4">
+                                    <a
+                                        href="https://drive.google.com/file/d/1bCGMzC7F4CC086UvRwI6F-KrDhdYIz5L/view?usp=drive_link"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold py-3 px-6 rounded-2xl hover:shadow-lg transition-shadow duration-300 flex items-center gap-2"
+                                    >
+                                        SAVOL-JAVOB
+                                    </a>
+                                </div>
                             </div>
-                        </InfoCard> */}
+                        </InfoCard>
 
                         {/* Social Media Links */}
                         <InfoCard className="bg-gradient-to-r from-purple-800 to-indigo-800">
@@ -200,7 +212,7 @@ const Hisobot = () => {
                                 QO'SHIMCHA
                             </SectionHeader>
                             <div className="space-y-4 text-base md:text-lg leading-relaxed">
-                                <h1  className="text-center text-base">Fabrikamizga kelib ishlab chiqarayotgan mahsulotlarimizni ko'ring.</h1>
+                                <h1 className="text-center text-base">Fabrikamizga kelib ishlab chiqarayotgan mahsulotlarimizni ko'ring.</h1>
                                 <h2 className=" text-base">Mahsulotimizga bozordagi bo'lgan talabni ko'ring. Ish faoliyatimiz va fabrikamizni ko'rib xulosa qilasiz.</h2>
                                 <h2 className="text-base"> Biz bundan xursand bo'lamiz.</h2>
                             </div>
