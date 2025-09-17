@@ -45,7 +45,7 @@ const Hisobot = () => {
     const StatsCard = ({ amount, monthly, yearly }) => (
         <div className="bg-gradient-to-br from-emerald-600 to-teal-700 rounded-xl p-4 md:p-6 text-center shadow-xl transform hover:scale-105 transition-transform duration-300">
             <div className="text-lg md:text-xl font-bold text-yellow-300 mb-2">{amount}</div>
-            <div className="text-sm md:text-base">Oylik: <span className="font-semibold">{monthly}</span></div>
+            <div className="text-sm md:text-base">Har Oylik: <span className="font-semibold">{monthly}</span></div>
             <div className="text-sm md:text-base">Yillik: <span className="font-semibold">{yearly}</span></div>
         </div>
     );
