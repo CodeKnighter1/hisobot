@@ -1,4 +1,9 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { LocateIcon, LocationEdit } from "lucide-react";
+import icon8l from '@/images/icons8-location-48.png'
+import icom8 from '@/images/icons8-location-32.png'
+import icon from '@/images/icons8-instagram-48.png'
+import icond from '@/images/icons8-dollar-40.png'
 
 const Hisobot = () => {
     // Reusable data structures
@@ -9,9 +14,9 @@ const Hisobot = () => {
     ];
 
     const investmentExamples = [
-        { amount: "10 000$", monthly: "500$", yearly: "6.000$" },
-        { amount: "5 000$", monthly: "250$", yearly: "3.000$" },
-        { amount: "2 500$", monthly: "125$", yearly: "1.500$" }
+        { amount: "2. 500 $", monthly: "125 $", yearly: "1.500 $" },
+        { amount: "5. 000 $", monthly: "250 $", yearly: "3.000 $" },
+        { amount: "10. 000 $", monthly: "500 $", yearly: "6.000 $" },
     ];
 
     const socialLinks = [
@@ -56,8 +61,8 @@ const Hisobot = () => {
                                 HAMKORLIK TIJORAT TAKLIFI
                             </h1>
                             <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-emerald-400 mx-auto mb-6"></div>
-                            <p className="text-xl md:text-2xl lg:text-3xl italic font-light">
-                                O'ZBEKISTONDAGI BIRINCHI VA YAGONA KO'CHMA DO'KONLAR FABRIKASI
+                            <p className="text-xl md:text-2xl lg:text-3xl font-serif font-light">
+                                BIRINCHI VA YAGONA KO'CHMA DO'KONLAR FABRIKASI
                             </p>
                         </div>
                     </CardHeader>
@@ -66,10 +71,10 @@ const Hisobot = () => {
                         {/* About Section */}
                         <InfoCard>
                             <SectionHeader className="text-yellow-300">
-                                BIZNING FAOLIYATIMIZ
+                                BIZNING <br /> FAOLIYATIMIZ
                             </SectionHeader>
-                            <div className="space-y-4 text-base md:text-lg leading-relaxed">
-                                <p>4-5 yildan buyon yurib kelayotgan fabrika.</p>
+                            <div className="space-y-4 text-2xl text-center md:text-lg leading-relaxed">
+                                <p>Faoliyat turi:</p>
                             </div>
                             <div className="space-y-4 text-base md:text-lg leading-relaxed">
                                 <p className="text-center">
@@ -85,7 +90,7 @@ const Hisobot = () => {
                             </SectionHeader>
                             <div className="text-center space-y-6">
                                 <p className="text-lg md:text-xl leading-relaxed">
-                                    <span className="font-bold text-yellow-300">Viloyatlarda dillerlik sotuv ofislari va shourumlarni tashkil qilish orqali biznesimizni kengaytirish</span>
+                                    <span className="font-bold text-yellow-300">Viloyatlarda dillerlik sotuv ofislari va shourumlarni tashkil qilish orqali biznesni kengaytirish</span>
                                 </p>
 
                                 <div className="grid md:grid-cols-2 gap-6 mt-8">
@@ -130,10 +135,20 @@ const Hisobot = () => {
                             </div>
                         </InfoCard>
 
+                        {/* <InfoCard>
+                            <SectionHeader className="text-yellow-300">
+                                TO'LIQ SHERIKLIK
+                            </SectionHeader>
+                            <div>
+                                <h1>Teng sheriklikda 50%/50% ya'ni sarmoya va daromad o'rtada(shourimni kengaytirib 12 ta viloyatda filial ochish.).</h1>
+                                <h2>Bahosi 70 000$</h2>
+                            </div>
+                        </InfoCard> */}
+
                         {/* Investment Returns */}
                         <InfoCard>
                             <SectionHeader className="text-yellow-300">
-                                QISMAN SHERIKLIK DAROMADI
+                                QISMAN SHERIKLIK <span className="flex text-center justify-center gap-1">DAROMADI <img src={icond} alt="" className="w-6 h-6" /></span> 
                             </SectionHeader>
                             <div className="text-center mb-8">
                                 <div className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-6 py-3 rounded-full font-bold text-lg md:text-xl">
@@ -148,13 +163,22 @@ const Hisobot = () => {
                             </div>
                         </InfoCard>
 
+                        {/* <InfoCard>
+                            <SectionHeader>
+                                TA'MINOTCHI
+                            </SectionHeader>
+                            <div>
+                                <h1>Bizning fabrikamizga kerak bo'lgan material bilan ta'minlab berasiz va shundan sizga % beramiz. Kelishilingan holda.</h1>
+                            </div>
+                        </InfoCard> */}
+
                         {/* Social Media Links */}
                         <InfoCard className="bg-gradient-to-r from-purple-800 to-indigo-800">
                             <SectionHeader className="text-yellow-300">
-                                Bizning faoliyatimiz bilan tanishib chiqing!
+                                BIZNING FAOLIYATIMIZ BILAN TANISHIB CHIQING
                             </SectionHeader>
                             <div className="text-center p-4 text-white">
-                                <h3 className="font-medium text-lg text-left">IJTIMOIY TARMOQLAR</h3>
+                                <h3 className="font-medium text-lg text-left flex gap-1">IJTIMOIY TARMOQLARIMIZ. <img src={icon} alt="" className="w-7 h-7" /> </h3>
                             </div>
                             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                                 {socialLinks.map((link, index) => (
@@ -171,16 +195,47 @@ const Hisobot = () => {
                             </div>
                         </InfoCard>
 
+                        <InfoCard>
+                            <SectionHeader className="text-yellow-300">
+                                QO'SHIMCHA
+                            </SectionHeader>
+                            <div className="space-y-4 text-base md:text-lg leading-relaxed">
+                                <h1  className="text-center text-base">Fabrikamizga kelib ishlab chiqarayotgan mahsulotlarimizni ko'ring.</h1>
+                                <h2 className=" text-base">Mahsulotimizga bozordagi bo'lgan talabni ko'ring. Ish faoliyatimiz va fabrikamizni ko'rib xulosa qilasiz.</h2>
+                                <h2 className="text-base"> Biz bundan xursand bo'lamiz.</h2>
+                            </div>
+                        </InfoCard>
+
+                        <InfoCard>
+                            <SectionHeader className="text-yellow-300">
+                                BIZNING MANZILIMIZ
+                            </SectionHeader>
+                            <div>
+                                <h1 className="text-base flex"> <img src={icom8} alt="" className="w-5 h-5" /> Toshkent shahar, Yangihayot tumani</h1>
+                                <h2 className="text-base">Metro: Turon bekat <br /> Index bozor chorraxasi</h2>
+                                <h2 className="mt-2 mb-2">Mo'ljal: Imzo zavod</h2>
+                            </div>
+                            <div className="rounded-lg text-center bg-emerald-600 px-4 py-3">
+                                <a
+                                    href="https://maps.app.goo.gl/abZn34TbaSjzdd9c6"
+                                    className="text-xl text-center flex gap-2 justify-center text-yellow-300 mt-2"
+                                >
+                                    <img src={icon8l} alt="location" className="w-6 h-6" />
+                                    Lokatsiyamiz
+                                </a>
+                            </div>
+                        </InfoCard>
+
                         {/* Footer Call to Action */}
                         <div className="text-center py-8">
-                            <div className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-black rounded-2xl p-6 md:p-8 shadow-2xl">
+                            <div className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-white rounded-2xl p-6 md:p-8 shadow-2xl">
                                 <div>
                                     <h3 className="text-[20px] italic md:text-3xl mb-2">
                                         Hamkorlik uchun quyidagi raqamga bog'laning:
                                     </h3>
                                     <div className="bg-black/20 rounded-lg px-4 py-2">
                                         <a href="tel:+998950107557" className="text-[17px] md:text-4xl font-medium hover:text-yellow-700 transition-colors duration-300">
-                                            📞 Bog'lanish
+                                            📞 +99895 010 75 57
                                         </a>
                                     </div>
                                 </div>
