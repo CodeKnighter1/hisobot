@@ -85,7 +85,7 @@ const Hisobot = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-slate-900 via-teal-900 to-slate-900">
-            <div className="container mx-auto px-4 py-8 md:py-12">
+            <div className="container mx-auto py-8 md:py-12">
                 <Card className="bg-gradient-to-br from-teal-900 via-teal-800 to-emerald-900 text-white shadow-2xl border-none overflow-hidden">
                     <CardHeader className="relative">
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
