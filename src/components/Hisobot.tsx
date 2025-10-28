@@ -1,23 +1,63 @@
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Info, LocateIcon, LocationEdit } from "lucide-react";
+import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import icon8l from '@/images/icons8-location-48.png'
 import icom8 from '@/images/icons8-location-32.png'
 import icon from '@/images/icons8-instagram-48.png'
-import icond from '@/images/icons8-dollar-40.png'
-import down from '@/images/icons8-down-100.png'
+import correct from "@/images/icons8-correct-96 (3).png"
+// import hisobot_i1 from "@/images/just/image copy 2.png"
+// import hisobot_i2 from "@/images/just/image copy 3.png"
+// import hisobot_i3 from "@/images/just/image copy 4.png"
+// import hisobot_i4 from "@/images/just/image copy.png"
+// import hisobot_i5 from "@/images/just/image.png"
+// import hisobot_i6 from "@/images/just/photo_2025-10-28_17-51-10.jpg"
+// import hisobot_i7 from "@/images/just/photo_2025-10-28_17-51-31.jpg"
+// import hisobot_i8 from "@/images/just/photo_2025-10-28_17-51-37.jpg"
 
 const Hisobot = () => {
     // Reusable data structures
-    const partnershipTypes = [
-        "TO'LIQ SHERIKLIK",
-        "QISMAN SHERIKLIK",
-        "TA'MINOTCHI"
+    const partnerships = [
+        {
+            title: "Qisman sheriklik:",
+            desc: "Kiritilingan mablag'ingizdan har oy 5% dan ya'ni yillik 60% sof foydangiz bo'ladi. Siz qisman sherik bo'lganligingiz uchun forsmajor holatlari bundan mustasno. Shartnoma MchJ yoki notarius orqali kelishilingan holda 1 yil muddatga tuziladi. Foydangizni plastik karta yoki naqd orqali to'laqonli olishingiz mumkin."
+        },
+        {
+            title: "To'liq sheriklik:",
+            desc: "Ishlash tartibimiz 50% / 50% bo'ladi. Bir xil sarmoya kiritib daromadini bir xil olamiz. Shartnoma muddati kelishilingan holda 1 yildan 3 yilgacha. Risk - formajor ham teng o'rtada bo'ladi."
+        },
+        {
+            title: "Ta'minotchi:",
+            desc: "Bizning fabrikamizga kerakli bo'lgan mahsulotlar bilan taminlab turasiz va kelishilingan holda sizga foiz(%) ajratamiz."
+        },
+        {
+            title: "Dillerlik",
+            desc: "Har bir 12 viloyatda shourum ochiladi maqsad usha yerdagi mijozlarga yaqinlik tug'dirish, mahsulotlarimizni tezroq yetkazish. Shartnoma qonuniy kelishilingan holda rasmiylashtiriladi."
+        }
     ];
 
-    const investmentExamples = [
-        { amount: "2. 500 $", monthly: "125 $", yearly: "1.500 $" },
-        { amount: "5. 000 $", monthly: "250 $", yearly: "3.000 $" },
-        { amount: "10. 000 $", monthly: "500 $", yearly: "6.000 $" },
+    const faqs = [
+        {
+            question: "Hamkorlik qilib qancha daromad qilish mumkin?",
+            answer: "Hamkorlik qilib oyiga 5% dan, yiliga esa 40% dan 60% gacha daromad qilishingiz mumkin!"
+        },
+        {
+            question: "Hamkorlik shartnomasi qanday tuziladi?",
+            answer: "Hamkorlikimiz qonuniy shartnoma asosida yoki natarius orqali boʻladi."
+        },
+        {
+            question: "Kiritilgan sarmoyadan foydani qancha vaqtda olish mumkin bo'ladi?",
+            answer: "Eng asosiysi kiritilgan sarmoyangizdan foydangizni har oy olasiz."
+        },
+        {
+            question: "Agar kiritilgan mablagni qaytarib olishmoqchi bo'lsa tartibi qanday bo'ladi?",
+            answer: "Kelishuvga asosan bir oy oldin ogohlantirib quyiladi va 30 ish kunida puliningizni qaytib olishiz mumkin."
+        },
+        {
+            question: "Foyda zarar qanday bo'ladi?",
+            answer: "Biz ishlab chiqarayotgan mahsulotimizni qarzga yoki nasiya savdoga sotmaganimiz naqd pulga sotganligimiz sabab va mahsulotlarimizni muddati o'tadigan mahsulotlar bo'lmagani uchun ham zarar ko'rish holatimiz kuzatilmaydi va hozirki kunda bozorda bizning mahsulotimiz birinchilardan bo'lganligi uchun talab yuqori, shuning uchun biznesimizni kengaytirish maqsadida hamkorlik qilmoqchimiz."
+        },
+        {
+            question: "Hamkorlik qilish uchun nima qilish kerak?",
+            answer: "Hamkorlik qilish uchun bizning ofisimizga va fabrikamizga keling va ishlab chiqarishimizni mahsulotimizga bozordagi talabni ko'ring va bir qarorga kelasiz va undan keyin xulosa qilsangiz bo'ladi."
+        }
     ];
 
     const socialLinks = [
@@ -31,24 +71,27 @@ const Hisobot = () => {
         }
     ];
 
+    // const pictures = [
+    //     { name: hisobot_i1 },
+    //     { name: hisobot_i2 },
+    //     { name: hisobot_i3 },
+    //     { name: hisobot_i4 },
+    //     { name: hisobot_i5 },
+    //     { name: hisobot_i6 },
+    //     { name: hisobot_i7 },
+    //     { name: hisobot_i8 }
+    // ]
 
-    const SectionHeader = ({ children, className = "" }) => (
-        <h2 className={`text-2xl md:text-3xl lg:text-4xl font-serif text-center mb-6 md:mb-8 ${className}`}>
+
+    const SectionHeader = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
+        <h2 className={`text-2xl md:text-3xl lg:text-4xl tracking-wide font-serif text-center mb-6 md:mb-8 ${className}`}>
             {children}
         </h2>
     );
 
-    const InfoCard = ({ children, className = "" }) => (
+    const InfoCard = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
         <div className={`bg-gradient-to-r from-teal-800 to-teal-700 rounded-lg p-4 md:p-6 mb-6 shadow-lg ${className}`}>
             {children}
-        </div>
-    );
-
-    const StatsCard = ({ amount, monthly, yearly }) => (
-        <div className="bg-gradient-to-br from-emerald-600 to-teal-700 rounded-xl p-4 md:p-6 text-center shadow-xl transform hover:scale-105 transition-transform duration-300">
-            <div className="text-lg md:text-xl font-bold text-yellow-300 mb-2">{amount}</div>
-            <div className="text-sm md:text-base">Har Oylik: <span className="font-semibold">{monthly}</span></div>
-            <div className="text-sm md:text-base">Yillik: <span className="font-semibold">{yearly}</span></div>
         </div>
     );
 
@@ -62,10 +105,7 @@ const Hisobot = () => {
                             <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif leading-tight mb-4 bg-gradient-to-r from-yellow-300 via-yellow-100 to-yellow-300 bg-clip-text text-transparent">
                                 HAMKORLIK  TIJORAT TAKLIFI
                             </h1>
-                            <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-emerald-400 mx-auto mb-6"></div>
-                            <p className="text-xl md:text-2xl lg:text-3xl font-serif font-light">
-                                BIRINCHI VA YAGONA <br /> "KO'CHMA DO'KON" LAR <br /> FABRIKASI
-                            </p>
+                            <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-emerald-400 mx-auto"></div>
                         </div>
                     </CardHeader>
 
@@ -85,9 +125,73 @@ const Hisobot = () => {
                             </div>
                         </InfoCard>
 
+                        <InfoCard>
+                            <SectionHeader className="text-yellow-300 tracking-wider">
+                                MAHSULOTLARIMIZGA BO'LGAN TALAB
+                            </SectionHeader>
+
+                            <div className="mt-6 space-y-5 text-white">
+                                {/* Talab punktlari */}
+                                <div className="space-y-4 sm:text-base md:text-lg lg:text-xl leading-relaxed">
+                                    <p className="flex items-start gap-3">
+                                        <img src={correct} alt="icon for increase" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex-shrink-0 mt-0.5" />
+                                        <span>
+                                            Biz O'zbekistonda birinchi va yagona fabrika bo'lganligimiz uchun hozirgi kunda bizga talab yuqori.
+                                        </span>
+                                    </p>
+                                    <p className="flex items-start gap-3">
+                                        <img src={correct} alt="icon for increase" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex-shrink-0 mt-0.5" />
+                                        <span>
+                                            Butun O'zbekiston bo'ylab bizning mahsulotlarimiz har bitta viloyat va tumanlarda mavjud.
+                                        </span>
+                                    </p>
+                                    <p className="flex items-start gap-3">
+                                        <img src={correct} alt="icon for increase" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex-shrink-0 mt-0.5" />
+                                        <span>
+                                            12 ta viloyatda va Toshkent shahrida bizning mahsulotlarimiz 50 dan ortiq hodim va 10 ga yaqin mutahasislarimiz 100 dan ortiq mahsulotlarni ishlab chiqarmoqda.
+                                        </span>
+                                    </p>
+                                </div>
+
+                                {/* Nega biz? */}
+                                <div className="mt-8">
+                                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-300 mb-4 text-center sm:text-left">
+                                        Nega aynan biz?
+                                    </h3>
+                                    <div className="space-y-3 sm:text-base md:text-lg lg:text-xl leading-relaxed">
+                                        <p className="flex items-center gap-3">
+                                            <img src={correct} alt="icon for increase" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex-shrink-0" />
+                                            Qurilish tezligi
+                                        </p>
+                                        <p className="flex items-center gap-3">
+                                            <img src={correct} alt="icon for increase" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex-shrink-0" />
+                                            Arzonroq xarajat
+                                        </p>
+                                        <p className="flex items-center gap-3">
+                                            <img src={correct} alt="icon for increase" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex-shrink-0" />
+                                            Mustahkamlik va chidamlilik
+                                        </p>
+                                        <p className="flex items-center gap-3">
+                                            <img src={correct} alt="icon for increase" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex-shrink-0" />
+                                            Ko'chirish va kengaytirish imkoniyati
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </InfoCard>
+
+                        <InfoCard>
+                            <SectionHeader className="text-yellow-300">
+                                FOYDA VA ZARAR
+                            </SectionHeader>
+                            <div>
+                                <p>Mahsulotlarimizni nasiyaga bermaslik va muddati o'tmasligi sababli faoliyatni zarar ko'rish xafi yo'q. Sababi oldindan buyurtmalarimiz mavjud.</p>
+                            </div>
+                        </InfoCard>
+
                         {/* Goals Section */}
                         <InfoCard className="bg-gradient-to-r from-emerald-800 to-teal-700">
-                            <SectionHeader className="text-yellow-300">
+                            <SectionHeader className="text-yellow-300 tracking-wide">
                                 HAMKORLIK MAQSADI
                             </SectionHeader>
                             <div className="text-center space-y-6">
@@ -125,67 +229,86 @@ const Hisobot = () => {
 
                         {/* Partnership Types */}
                         <InfoCard>
-                            <SectionHeader className="text-yellow-300">
+                            <SectionHeader className="text-yellow-300 tracking-wide">
                                 HAMKORLIK TURLARI
                             </SectionHeader>
                             <div className="grid md:grid-cols-3 gap-4">
-                                {partnershipTypes.map((type, index) => (
-                                    <div key={index} className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-lg p-4 text-center font-semibold hover:shadow-lg transition-shadow duration-300">
-                                        <span className="text-yellow-300 font-bold">{index + 1}.</span> {type}
+                                {partnerships.map((item, index) => (
+                                    <div
+                                        key={index}
+                                        className="group"
+                                    >
+                                        {/* Title */}
+                                        <h3 className="text-2xl sm:text-3xl tracking-wide font-bold text-amber-600 transition-colors text-start mb-6">
+                                            {item.title}
+                                        </h3>
+
+                                        {/* Description — uzun matn uchun */}
+                                        <p className="text-base sm:text-lg text-white leading-relaxed text-left max-w-3xl mx-auto">
+                                            {item.desc}
+                                        </p>
                                     </div>
                                 ))}
                             </div>
                         </InfoCard>
 
-                        {/* <InfoCard>
-                            <SectionHeader className="text-yellow-300">
-                                TO'LIQ SHERIKLIK
-                            </SectionHeader>
-                            <div>
-                                <h1>Teng sheriklikda 50%/50% ya'ni sarmoya va daromad o'rtada(shourimni kengaytirib 12 ta viloyatda filial ochish.).</h1>
-                                <h2>Bahosi 70 000$</h2>
-                            </div>
-                        </InfoCard> */}
 
-                        {/* Investment Returns */}
                         <InfoCard>
                             <SectionHeader className="text-yellow-300">
-                                QISMAN SHERIKLIK <span className="flex text-center justify-center gap-1">DAROMADI <img src={icond} alt="" className="w-6 h-6" /></span>
+                                QO'SHIMCHA
                             </SectionHeader>
-                            <div className="text-center mb-8">
-                                <div className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-600 text-black px-6 py-3 rounded-full font-bold text-lg md:text-xl">
-                                    Oylik 5% • Yillik 60%
-                                </div>
-                            </div>
-
-                            <div className="grid md:grid-cols-3 gap-6 mb-8">
-                                {investmentExamples.map((example, index) => (
-                                    <StatsCard key={index} {...example} />
-                                ))}
+                            <div className="space-y-4 text-base md:text-lg leading-relaxed">
+                                <h1 className="text-center text-base">Fabrikamizga kelib ishlab chiqarayotgan mahsulotlarimizni ko'ring.</h1>
+                                <h2 className=" text-base">Mahsulotimizga bozordagi bo'lgan talabni ko'ring. Ish faoliyatimiz va fabrikamizni ko'rib xulosa qilasiz.</h2>
+                                <h2 className="text-base"> Biz bundan xursand bo'lamiz.</h2>
                             </div>
                         </InfoCard>
 
                         <InfoCard>
-                            <SectionHeader className="text-yellow-300">
+                            <SectionHeader className="text-yellow-300 tracking-wide">
                                 SAVOL - JAVOBLAR
                             </SectionHeader>
-                            <div>
-                                <h1>Barcha savollaringizga shu tugmani bosish orqali javob topishingiz mumkin</h1>
-                                <div className="flex justify-center mt-4">
-                                    <a
-                                        href="https://drive.google.com/file/d/1bCGMzC7F4CC086UvRwI6F-KrDhdYIz5L/view?usp=drive_link"
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-block bg-gradient-to-r from-yellow-400 to-yellow-600 text-black font-bold py-3 px-6 rounded-2xl hover:shadow-lg transition-shadow duration-300 flex items-center gap-2"
-                                    >
-                                        SAVOL-JAVOB
-                                    </a>
+
+                            <div className="mt-6">
+                                <p className="text-center text-white mb-8 font-medium">
+                                    Barcha savollaringizga shu tugmani bosish orqali javob topishingiz mumkin
+                                </p>
+
+                                {/* Yagona dizayn — barcha ekranlar uchun */}
+                                <div className="max-w-4xl mx-auto">
+                                    <div className="space-y-2">
+                                        {faqs.map((faq, index) => (
+                                            <div
+                                                key={index}
+                                                className="p-2"
+                                            >
+                                                {/* Savol */}
+                                                <h4 className="font-bold text-base md:text-lg text-white mb-2 flex items-start gap-2">
+                                                    <span className="w-7 h-7 sm:w-8 sm:h-8 bg-amber-600 text-white rounded-full flex items-center justify-center text-xs sm:text-sm font-bold flex-shrink-0">
+                                                        {index + 1}
+                                                    </span>
+                                                    <span className="text-amber-700">Savol:</span>
+                                                    <span className="font-medium">{faq.question}</span>
+                                                </h4>
+
+                                                {/* Javob */}
+                                                <p className="text-white text-base leading-relaxed pl-9 sm:pl-10">
+                                                    <span className="font-semibold text-amber-600">Javob:</span> {faq.answer}
+                                                </p>
+                                            </div>
+                                        ))}
+                                    </div>
                                 </div>
+
+                                {/* Oxirgi xabar */}
+                                <p className="mt-10 text-center text-lg font-bold text-yellow-300 italic">
+                                    Sizga foydamizdan ulish beramiz. Bu degani halol biznes.
+                                </p>
                             </div>
                         </InfoCard>
 
                         {/* Social Media Links */}
-                        <InfoCard className="bg-gradient-to-r from-purple-800 to-indigo-800">
+                        <InfoCard className="tracking-wide bg-gradient-to-r from-purple-800 to-indigo-800">
                             <SectionHeader className="text-yellow-300">
                                 BIZNING FAOLIYATIMIZ BILAN TANISHIB CHIQING
                             </SectionHeader>
@@ -209,17 +332,6 @@ const Hisobot = () => {
 
                         <InfoCard>
                             <SectionHeader className="text-yellow-300">
-                                QO'SHIMCHA
-                            </SectionHeader>
-                            <div className="space-y-4 text-base md:text-lg leading-relaxed">
-                                <h1 className="text-center text-base">Fabrikamizga kelib ishlab chiqarayotgan mahsulotlarimizni ko'ring.</h1>
-                                <h2 className=" text-base">Mahsulotimizga bozordagi bo'lgan talabni ko'ring. Ish faoliyatimiz va fabrikamizni ko'rib xulosa qilasiz.</h2>
-                                <h2 className="text-base"> Biz bundan xursand bo'lamiz.</h2>
-                            </div>
-                        </InfoCard>
-
-                        <InfoCard>
-                            <SectionHeader className="text-yellow-300">
                                 BIZNING MANZILIMIZ
                             </SectionHeader>
                             <div>
@@ -230,7 +342,7 @@ const Hisobot = () => {
                             <div className="rounded-lg text-center bg-emerald-600 px-4 py-3">
                                 <a
                                     href="https://maps.app.goo.gl/abZn34TbaSjzdd9c6"
-                                    className="text-xl text-center flex gap-2 justify-center text-yellow-300 mt-2"
+                                    className="text-xl text-center flex gap-1 items-center justify-center text-yellow-300 mt-2"
                                 >
                                     <img src={icon8l} alt="location" className="w-6 h-6" />
                                     Lokatsiyamiz
