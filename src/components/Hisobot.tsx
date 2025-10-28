@@ -136,7 +136,7 @@ const Hisobot = () => {
                                     <p className="flex items-start gap-3">
                                         <img src={correct} alt="icon for increase" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex-shrink-0 mt-0.5" />
                                         <span>
-                                            Respublika bo'ylab 100 ga yaqin xodimlarimiz xodimlarimiz mavjud. <br /> 15 ga yaqin sotuv menejirlarimiz <br />  10 dan ortiq ish boshqaruvchilarimiz <br />
+                                            Respublika bo'ylab 100 ga yaqin xodimlarimiz mavjud. <br /> 15 ga yaqin sotuv menejirlarimiz <br />  10 dan ortiq ish boshqaruvchilarimiz <br />
                                         </span>
                                     </p>
                                     <p className="flex items-start gap-3">
@@ -161,7 +161,7 @@ const Hisobot = () => {
 
                                 <div>
                                     <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-yellow-300 mb-4 text-center sm:text-left">
-                                        Yunalishlarimiz
+                                        Yo'nalishlarimiz
                                     </h3>
                                     <div className="text-xl">
 
@@ -308,7 +308,7 @@ const Hisobot = () => {
                                 <p className="flex items-center gap-3 mt-2">
                                     <img src={correct} alt="icon for increase" className="w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10 flex-shrink-0" />
                                     <span>
-                                        Mahsulotlarimizga olinadigan xom ashyolarni muddati utib ketmasligi.
+                                        Mahsulotlarimizga olinadigan xom ashyolarni muddati o'tib ketmasligi.
                                     </span>
                                 </p>
                                 <p className="flex items-center gap-3 mt-2">
