@@ -154,7 +154,7 @@ const Hisobot = () => {
                                     <p className="flex items-start gap-3">
                                         <img src={correct} alt="icon for increase" className="w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10 flex-shrink-0 mt-0.5" />
                                         <span>
-                                            Fabrikamizda 6 xil yunalishda 100 dan ortiq dizaynda mahsulotlar ishlab chiqariladi.
+                                            Fabrikamizda 6 xil yo'nalishda 100 dan ortiq dizaynda mahsulotlar ishlab chiqariladi.
                                         </span>
                                     </p>
                                 </div>
