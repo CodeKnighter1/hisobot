@@ -115,9 +115,9 @@ const Hisobot = () => {
                             <SectionHeader className="text-yellow-300">BIZNING FAOLIYATIMIZ</SectionHeader>
                             <div className=" flex items-center flex-col space-y-5 text-center">
                                 <h3 className="tracking-wider font-serif font-semibold text-xl text-center uppercase mt-3">Bino - inshoatlar fabrikasi</h3>
-                                <div className="flex items-center gap-4 text-xl font-bold">
-                                    <p>Faoliyat turi:</p>
-                                    <h3>Yengil konstruksiyadan iborat</h3>
+                                <div className="flex flex-col items-center gap-1 text-xl font-bold">
+                                    <p className="tracking-wider">FAOLIYAT TURI:</p>
+                                    <h3>Yengil konstruksiyadan iborat.</h3>
                                 </div>
                             </div>
                         </InfoCard>
@@ -126,7 +126,7 @@ const Hisobot = () => {
                         <InfoCard>
                             <SectionHeader className="text-yellow-300 tracking-wide">HAMKORLIK MAQSADI</SectionHeader>
                             <div className="text-center mb-10">
-                                <p className="text-lg md:text-xl font-bold text-white tracking-wider leading-relaxed">Viloyatlarda dillerlik sotuv ofislari va shourumlarni tashkil qilish orqali biznesni kengaytirish</p>
+                                <p className="text-lg md:text-xl font-bold text-white tracking-wider leading-relaxed">Viloyatlarda dillerlik sotuv ofislari va shourumlarni tashkil qilish orqali biznesni kengaytirish.</p>
                             </div>
                         </InfoCard>
 
@@ -135,7 +135,7 @@ const Hisobot = () => {
                             <div className="text-center mt-5">
                                 <div>
                                     <p className="text-xl font-bold text-white tracking-wider">Yillik: 40-48% gacha</p>
-                                    <p className="text-xl font-bold text-white tracking-wider mt-4">Shartnoma muddati 1 yildan 3 yilgacha</p>
+                                    <p className="text-xl font-bold text-white tracking-wider mt-4">Shartnoma muddati 1 yildan 3 yilgacha.</p>
                                     <p className="text-xl font-bold text-white tracking-wider mt-4">Kelishuv 100% qonuniy shartnoma yoki notarius orqali tuziladi.</p>
                                 </div>
                             </div>
