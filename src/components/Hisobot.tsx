@@ -73,9 +73,9 @@ const Hisobot = () => {
 
     // Reusable components
     const SectionHeader = ({ children, className = "" }: any) => (
-        <h2 className={`text-2xl md:text-3xl lg:text-4xl tracking-wide font-serif text-center mb-4 ${className}`}>
+        <h2 className={`text-2xl md:text-3xl lg:text-4xl tracking-wide font-serif uppercase text-center mb-4 ${className}`}>
             {children}
-        </h2>
+        </h2>  
     );
 
     const InfoCard = ({ children, className = "" }: any) => (
@@ -124,14 +124,14 @@ const Hisobot = () => {
 
                         {/* Maqsad Section */}
                         <InfoCard>
-                            <SectionHeader className="text-yellow-300 tracking-wide">HAMKORLIK MAQSADI</SectionHeader>
+                            <SectionHeader className="text-yellow-300 tracking-wide">Hamkorlik maqsadi</SectionHeader>
                             <div className="text-center mb-10">
                                 <p className="text-lg md:text-xl font-bold text-white tracking-wider leading-relaxed">Viloyatlarda dillerlik sotuv ofislari va shourumlarni tashkil qilish orqali biznesni kengaytirish.</p>
                             </div>
                         </InfoCard>
 
                         <InfoCard>
-                            <SectionHeader className="text-yellow-300 tracking-wider uppercase">Hamkorlik daromadi</SectionHeader>
+                            <SectionHeader className="text-yellow-300 tracking-wider">Hamkorlik daromadi</SectionHeader>
                             <div className="text-center mt-5">
                                 <div>
                                     <p className="text-xl font-bold text-white tracking-wider">Yillik: 40-48% gacha</p>
@@ -143,20 +143,20 @@ const Hisobot = () => {
 
                         {/* Talab va Yo'nalishlar Section */}
                         <InfoCard>
-                            <SectionHeader className="text-yellow-300 tracking-wider">MAHSULOTLARIMIZGA BO'LGAN TALAB</SectionHeader>
+                            <SectionHeader className="text-yellow-300 tracking-wider">Respublika bo'ylab xizmat</SectionHeader>
                             <div className="mt-6 space-y-8 text-white">
                                 <ListWithIcon items={activities} />
                             </div>
                         </InfoCard>
 
                         <InfoCard>
-                            <SectionHeader className="text-yellow-300 tracking-wider">Yo'nalishlar</SectionHeader>
+                            <SectionHeader className="text-yellow-300 tracking-wider">Ishlab chiqarish yo'nalishlarimiz</SectionHeader>
                             <div>
                                 <ListWithIcon items={directions} />
                             </div>
 
                             <div>
-                                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold font-serif text-yellow-300 mb-4 text-center sm:text-left uppercase tracking-wider">Ushbu mahsulotlarga talab ko'p?</h3>
+                                <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif text-yellow-300 mb-4 text-center sm:text-left uppercase tracking-wider mt-8">Mahsulotlarga talab ko'p?</h3>
                                 <ListWithIcon items={advantages} iconSize="w-8 h-8" />
                             </div>
                         </InfoCard>
