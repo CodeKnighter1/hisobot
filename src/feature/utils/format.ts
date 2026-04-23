@@ -1,6 +1,6 @@
 // utils/format.ts
 export function formatUSD(n: number): string {
-    return "$" + Math.round(n).toLocaleString("en-US");
+    return Math.round(n).toLocaleString("en-US") + "$";
 }
 
 export function formatUZS(n: number): string {

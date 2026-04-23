@@ -99,7 +99,7 @@ export default function InvestmentCalculator() {
                         <p className="text-yellow-300 text-xs">Oylik foyda</p>
                         <p className="text-yellow-300 font-bold text-lg">
                             {format(result.minMonthly, currency)} –{" "}
-                            {format(result.maxMonthly, currency)}
+                            {format(result.maxMonthly, currency)} gacha
                         </p>
                     </div>
 
@@ -108,7 +108,7 @@ export default function InvestmentCalculator() {
                         <p className="text-yellow-300 text-xs">Yillik foyda</p>
                         <p className="text-yellow-300 font-bold text-lg">
                             {format(result.minAnnual, currency)} –{" "}
-                            {format(result.maxAnnual, currency)}
+                            {format(result.maxAnnual, currency)} gacha
                         </p>
                     </div>
                 </div>

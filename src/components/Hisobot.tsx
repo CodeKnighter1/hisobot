@@ -7,13 +7,13 @@ import InvestmentCalculator from "./InvestmentCalculator";
 const Hisobot = () => {
     // Reusable data structures
     const activities = [
-        "Respublika bo'ylab 100 ga yaqin xodimlarimiz mavjud. 15 ga yaqin sotuv menejirlarimiz, 10 dan ortiq ish boshqaruvchilarimiz",
+        "Faoliyatimiz respublika bo'ylab 100 ga yaqin xodimlarimiz mavjud. 15 ga yaqin sotuv menejirlarimiz, 10 dan ortiq ish boshqaruvchilarimiz",
         "Butun O'zbekiston bo'ylab bizning mahsulotlarimiz har bitta viloyat va tumanlarda mavjud.",
-        "Fabrika faoliyatiga 8 yil bo'ldi.",
-        "Fabrikamizda 10 xil yo'nalishda mahsulotlar ishlab chiqariladi."
     ];
 
     const directions = [
+        "Fabrika faoliyatiga 8 yil bo'ldi.",
+        "Fabrikamizda 10 xil yo'nalishda mahsulotlar ishlab chiqariladi.",
         "Ko'chma Do'kon", "Kontainer City", "Modul uylar",
         "Capsula Do'konlar", "Food Trucklar", "Akfa Butkalar", "Prefabrika uylar",];
 
@@ -27,35 +27,35 @@ const Hisobot = () => {
 
     const faqs = [
         {
-            question: "Hamkorlik qilib qancha daromad qilish mumkin?",
-            answer: "Hamkorlik qilib yiliga 40% dan 48% gacha daromad qilishingiz mumkin!"
+            question: "Hamkorlik qilib qancha daromad qilish mumkin ?",
+            answer: "Hamkorlik qilib yiliga 40% dan 48% gacha daromad qilishingiz mumkin !"
         },
         {
-            question: "Hamkorlik shartnomasi qanday tuziladi?",
+            question: "Hamkorlik shartnomasi qanday tuziladi ?",
             answer: "Hamkorlikimiz qonuniy shartnoma asosida yoki natarius orqali boʻladi."
         },
         {
-            question: "Kiritilgan sarmoyadan foydani qancha vaqtda olish mumkin bo'ladi?",
+            question: "Kiritilgan sarmoyadan foydani qancha vaqtda olish mumkin bo'ladi ?",
             answer: "Kiritilgan sarmoyangizdan foydangizni har oy olasiz."
         },
         {
-            question: "Hamkorlik qanday tartibda amalga oshiriladi?",
-            answer: "Hamkorligimiz teng sherikchilik yoki qisman sherikchilik asosida ikki taraf kelishgan holda amalga oshiriladi"
+            question: "Hamkorlik qanday tartibda amalga oshiriladi ?",
+            answer: "Hamkorligimiz teng sherikchilik yoki qisman sherikchilik asosida ikki taraf kelishgan holda amalga oshiriladi."
         },
         {
-            question: "Agar kiritilgan mablagni  qaytarib olishmoqchi bo'lsa tartibi qanday bo'ladi?",
+            question: "Agar kiritilgan mablagni  qaytarib olishmoqchi bo'lsa tartibi qanday bo'ladi ?",
             answer: "Kelishuvga asosan hamkorlikni to'xtatib mablag'ingizni qaytarib olishingiz mumkin."
         },
         {
-            question: "Foyda zarar qanday boladi?",
-            answer: "Biz ishlab chiqarayotgan mahsulotimizni qarzga yoki nasiya savdoga sotmaganligimiz va ishlab chiqarayotgan mahsulotlarimizning muddati otadigan bo'lmagani uchun ham zarar ko'rish holatimiz kuzatilmaydi. Hozirgi kunda bozorda bizning mahsulotimizga talab yuqori bo'lganligi uchun biznesimizni kengaytirish maqsadida hamkorlik qilmoqchimiz."
+            question: "Foyda zarar qanday boladi ?",
+            answer: "Biz ishlab chiqarayotgan mahsulotimizni qarzga yoki nasiya savdoga sotmaganligimiz va ishlab chiqarayotgan mahsulotlarimizning muddati otadigan bo'lmagani uchun ham zarar ko'rish holatimiz kuzatilmaydi. Hozirgi kunda bozorda bizning mahsulotimizga talab yuqori bo'lganligi uchun biznesimizни kengaytirish maqsadida hamkorlik qilmoqchimiz."
         },
         {
-            question: "Hamkorlik qilish uchun nima qilish kerek?",
+            question: "Hamkorlik qilish uchun nima qilish kerek ?",
             answer: "Hamkorlik qilish uchun bizning ofisimizga va  fabrikamizga kelin va ishlab chiqarishimizni mahsulotimizga bozordagi talabni koring va bir qarorga kelasiz  va undan keyin xulosa qilsangiz boladi."
         },
         {
-            question: "Oʻzi tayyor yurib turgan biznes boʻlsa, hamkorlikdan maqsad nima?",
+            question: "Oʻzi tayyor yurib turgan biznes boʻlsa, hamkorlikdan maqsad nima ?",
             answer: "Hamkorlikdan maqsad Viloyatlarda dillerlik sotuv offislari va shourumlarni tashkil qilish."
         }
     ];
@@ -67,8 +67,8 @@ const Hisobot = () => {
     ]
 
     const socialLinks = [
-        { title: "Ko'chma do'kon Instagrami", url: "https://www.instagram.com/kochma.dokon/..." },
-        { title: "Kontainer City Instagrami", url: "https://www.instagram.com/kontainer_city.uz..." }
+        { title: "Ko'chma do'kon Instagrami", url: "https://www.instagram.com/kochma.dokon/" },
+        { title: "Kontainer City Instagrami", url: "https://www.instagram.com/kontainer_city.uz/" }
     ];
 
     // Reusable components
@@ -85,7 +85,7 @@ const Hisobot = () => {
     );
 
     const ListWithIcon = ({ items, iconSize = "w-8 h-8 sm:w-9 sm:h-9 md:w-10 md:h-10" }: any) => (
-        <div className="space-y-4 sm:text-base md:text-lg lg:text-xl leading-relaxed">
+        <div className="space-y-4 sm:text-base md:text-lg lg:text-xl font-semibold tracking-wide leading-relaxed">
             {items.map((text: string, idx: number) => (
                 <p key={idx} className="flex items-start gap-3">
                     <img src={correct} alt="check" className={`${iconSize} flex-shrink-0 mt-0.5`} />
@@ -116,7 +116,7 @@ const Hisobot = () => {
                             <div className=" flex items-center flex-col space-y-5 text-center">
                                 <h3 className="tracking-wider font-serif font-semibold text-xl text-center uppercase mt-3">Bino - inshoatlar fabrikasi</h3>
                                 <div className="flex flex-col items-center gap-1 text-xl font-bold">
-                                    <p className="tracking-wider">FAOLIYAT TURI:</p>
+                                    <p className="tracking-wider text-yellow-400">FAOLIYAT TURI:</p>
                                     <h3>Yengil konstruksiyadan iborat.</h3>
                                 </div>
                             </div>
@@ -146,16 +146,18 @@ const Hisobot = () => {
                             <SectionHeader className="text-yellow-300 tracking-wider">MAHSULOTLARIMIZGA BO'LGAN TALAB</SectionHeader>
                             <div className="mt-6 space-y-8 text-white">
                                 <ListWithIcon items={activities} />
+                            </div>
+                        </InfoCard>
 
-                                <div>
-                                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold font-serif text-yellow-300 mb-4 text-center sm:text-left uppercase tracking-wider">Yo'nalishlarimiz</h3>
-                                    <ListWithIcon items={directions} />
-                                </div>
+                        <InfoCard>
+                            <SectionHeader className="text-yellow-300 tracking-wider">Yo'nalishlar</SectionHeader>
+                            <div>
+                                <ListWithIcon items={directions} />
+                            </div>
 
-                                <div>
-                                    <h3 className="text-xl sm:text-2xl md:text-3xl font-bold font-serif text-yellow-300 mb-4 text-center sm:text-left uppercase tracking-wider">Ushbu mahsulotlarga talab ko'p?</h3>
-                                    <ListWithIcon items={advantages} iconSize="w-8 h-8" />
-                                </div>
+                            <div>
+                                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold font-serif text-yellow-300 mb-4 text-center sm:text-left uppercase tracking-wider">Ushbu mahsulotlarga talab ko'p?</h3>
+                                <ListWithIcon items={advantages} iconSize="w-8 h-8" />
                             </div>
                         </InfoCard>
 
@@ -178,7 +180,7 @@ const Hisobot = () => {
                                             <img src={correct} alt="q" className="w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10 flex-shrink-0 mt-0.5" />
                                             <span>{faq.question}</span>
                                         </h4>
-                                        <p className="text-white text-base leading-relaxed px-2 md:pl-12">{faq.answer}</p>
+                                        <p className="text-white text-base font-medium  tracking-wide leading-relaxed px-2 md:pl-12">{faq.answer}</p>
                                         <div className="px-2 mt-2 md:pl-8">
                                             <div className="w-[310px] h-0.5 bg-yellow-500"></div>
                                         </div>
@@ -215,7 +217,7 @@ const Hisobot = () => {
                                 <p>Mo'ljal: Imzo zavod ro'parasida</p>
                             </div>
                             <div className="rounded-lg text-center bg-emerald-600 px-4 py-3">
-                                <a href="#" className="text-xl font-semibold flex gap-2 items-center justify-center text-yellow-300">
+                                <a href="https://maps.app.goo.gl/SQLFe75gckdKrb4P9" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold flex gap-2 items-center justify-center text-yellow-300">
                                     <img src={icon8l} alt="loc" className="w-6 h-6" /> Lokatsiyamiz
                                 </a>
                             </div>
