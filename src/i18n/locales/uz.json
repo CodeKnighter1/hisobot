@@ -1,0 +1,97 @@
+{
+  "hisobot": {
+    "activities": [
+      "Faoliyatimiz respublika bo'ylab 100 ga yaqin xodimlarimiz mavjud. 15 ga yaqin sotuv menejirlarimiz, 10 dan ortiq ish boshqaruvchilarimiz",
+      "Butun O'zbekiston bo'ylab bizning mahsulotlarimiz har bitta viloyat va tumanlarda mavjud."
+    ],
+    "directions": [
+      "Fabrika faoliyatiga 8 yil bo'ldi.",
+      "Fabrikamizda 10 xil yo'nalishda mahsulotlar ishlab chiqariladi.",
+      "Ko'chma Do'kon",
+      "Kontainer City",
+      "Modul uylar",
+      "Capsula Do'konlar",
+      "Food Trucklar",
+      "Akfa Butkalar",
+      "Prefabrika uylar"
+    ],
+    "advantages": [
+      "Qurilish tezligi va yuqori sifat",
+      "Xamyonbob xarajat",
+      "Mustahkamlik va chidamlilik",
+      "Ko'chirish va kengaytirish imkoniyati"
+    ],
+    "faqs": [
+      {
+        "question": "Hamkorlik qilib qancha daromad qilish mumkin ?",
+        "answer": "Hamkorlik qilib yiliga 40% dan 48% gacha daromad qilishingiz mumkin !"
+      },
+      {
+        "question": "Hamkorlik shartnomasi qanday tuziladi ?",
+        "answer": "Hamkorlikimiz qonuniy shartnoma asosida yoki natarius orqali boʻladi."
+      },
+      {
+        "question": "Kiritilgan sarmoyadan foydani qancha vaqtda olish mumkin bo'ladi ?",
+        "answer": "Kiritilgan sarmoyangizdan foydangizni har oy olasiz."
+      },
+      {
+        "question": "Hamkorlik qanday tartibda amalga oshiriladi ?",
+        "answer": "Hamkorligimiz teng sherikchilik yoki qisman sherikchilik asosida ikki taraf kelishgan holda amalga oshiriladi."
+      },
+      {
+        "question": "Agar kiritilgan mablagni  qaytarib olishmoqchi bo'lsa tartibi qanday bo'ladi ?",
+        "answer": "Kelishuvga asosan hamkorlikni to'xtatib mablag'ingizni qaytarib olishingiz mumkin."
+      },
+      {
+        "question": "Foyda zarar qanday boladi ?",
+        "answer": "Biz ishlab chiqarayotgan mahsulotimizni qarzga yoki nasiya savdoga sotmaganligimiz va ishlab chiqarayotgan mahsulotlarimizning muddati otadigan bo'lmagani uchun ham zarar ko'rish holatimiz kuzatilmaydi. Hozirgi kunda bozorda bizning mahsulotimizga talab yuqori bo'lganligi uchun biznesimizni kengaytirish maqsadida hamkorlik qilmoqchimiz."
+      },
+      {
+        "question": "Hamkorlik qilish uchun nima qilish kerek ?",
+        "answer": "Hamkorlik qilish uchun bizning ofisimizga va  fabrikamizga kelin va ishlab chiqarishimizni mahsulotimizga bozordagi talabni koring va bir qarorga kelasiz  va undan keyin xulosa qilsangiz boladi."
+      },
+      {
+        "question": "Oʻzi tayyor yurib turgan biznes boʻlsa, hamkorlikdan maqsad nima ?",
+        "answer": "Hamkorlikdan maqsad Viloyatlarda dillerlik sotuv offislari va shourumlarni tashkil qilish."
+      }
+    ],
+    "sugest": [
+      "Fabrikamizga kelib ishlab chiqarayotgan mahsulotlarimizni ko'ring.",
+      "Mahsulotimizga bo'lgan talabni ko'ring. Ish faoliyatimiz va fabrikamizni ko'rib xulosa qiling.",
+      "Sizga foydamizdan ulish beramiz. Bu degani halol biznes."
+    ],
+    "social": {
+      "kochma_dokon": "Ko'chma do'kon Instagrami",
+      "kontainer_city": "Kontainer City Instagrami"
+    },
+    "titles": {
+      "main": "HAMKORLIK TIJORAT TAKLIFI",
+      "activities": "BIZNING FAOLIYATIMIZ",
+      "factory": "Bino - inshoatlar fabrikasi",
+      "activity_type_label": "FAOLIYAT TURI:",
+      "activity_type_value": "Yengil konstruksiyadan iborat.",
+      "goal": "Hamkorlik maqsadi",
+      "goal_desc": "Viloyatlarda dillerlik sotuv ofislari va shourumlarni tashkil qilish orqali biznesni kengaytirish.",
+      "income": "Hamkorlik daromadi",
+      "income_annual": "Yillik: 40-48% gacha",
+      "contract_term": "Shartnoma muddati 1 yildan 3 yilgacha.",
+      "contract_legal": "Kelishuv 100% qonuniy shartnoma yoki notarius orqali tuziladi.",
+      "service_republic": "Respublika bo'ylab xizmat",
+      "production_directions": "Ishlab chiqarish yo'nalishlarimiz",
+      "demand_high": "Mahsulotlarga talab ko'p?",
+      "calculator": "HISOB KALKULYATORI",
+      "calculator_desc": "Hamkorlik bo'yicha kiritmoqchi bo'lgan mablag'ingizni kiriting — oylik va yillik daromadingizni hisoblab ko'ring.",
+      "faqs": "SAVOL - JAVOBLAR",
+      "social_intro": "BIZNING FAOLIYATIMIZ BILAN TANISHIB CHIQING",
+      "social_networks": "IJTIMOIY TARMOQLARIMIZ",
+      "address_title": "BIZNING MANZILIMIZ",
+      "address_city": "Toshkent shahar, Yangihayot tumani",
+      "address_metro": "Metro: Turon bekat",
+      "address_landmark": "Mo'ljal: Imzo zavod ro'parasida",
+      "location": "Lokatsiyamiz",
+      "contact_phone": "Hamkorlik uchun quyidagi raqamga bog'laning:",
+      "contact_telegram": "Telegramdan yozib qoldiring:",
+      "telegram": "Telegram"
+    }
+  }
+}

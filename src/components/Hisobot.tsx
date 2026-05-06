@@ -3,79 +3,34 @@ import icon8l from '@/images/icons8-location-48.png';
 import icon from '@/images/icons8-instagram-48.png';
 import correct from "@/images/icons8-correct-96 (3).png";
 import InvestmentCalculator from "./InvestmentCalculator";
+import { useTranslation } from "react-i18next";
+import LanguageTabs from "./LanguageTabs";
+import { Phone, Send } from "lucide-react";
 
 const Hisobot = () => {
+    const { t } = useTranslation();
+
     // Reusable data structures
-    const activities = [
-        "Faoliyatimiz respublika bo'ylab 100 ga yaqin xodimlarimiz mavjud. 15 ga yaqin sotuv menejirlarimiz, 10 dan ortiq ish boshqaruvchilarimiz",
-        "Butun O'zbekiston bo'ylab bizning mahsulotlarimiz har bitta viloyat va tumanlarda mavjud.",
-    ];
+    const activities = t("hisobot.activities", { returnObjects: true }) as string[];
 
-    const directions = [
-        "Fabrika faoliyatiga 8 yil bo'ldi.",
-        "Fabrikamizda 10 xil yo'nalishda mahsulotlar ishlab chiqariladi.",
-        "Ko'chma Do'kon", "Kontainer City", "Modul uylar",
-        "Capsula Do'konlar", "Food Trucklar", "Akfa Butkalar", "Prefabrika uylar",];
+    const directions = t("hisobot.directions", { returnObjects: true }) as string[];
 
-    const advantages = [
-        "Qurilish tezligi va yuqori sifat",
-        "Xamyonbob xarajat",
-        "Mustahkamlik va chidamlilik",
-        "Ko'chirish va kengaytirish imkoniyati"
-    ];
+    const advantages = t("hisobot.advantages", { returnObjects: true }) as string[];
 
+    const faqs = t("hisobot.faqs", { returnObjects: true }) as { question: string, answer: string }[];
 
-    const faqs = [
-        {
-            question: "Hamkorlik qilib qancha daromad qilish mumkin ?",
-            answer: "Hamkorlik qilib yiliga 40% dan 48% gacha daromad qilishingiz mumkin !"
-        },
-        {
-            question: "Hamkorlik shartnomasi qanday tuziladi ?",
-            answer: "Hamkorlikimiz qonuniy shartnoma asosida yoki natarius orqali boʻladi."
-        },
-        {
-            question: "Kiritilgan sarmoyadan foydani qancha vaqtda olish mumkin bo'ladi ?",
-            answer: "Kiritilgan sarmoyangizdan foydangizni har oy olasiz."
-        },
-        {
-            question: "Hamkorlik qanday tartibda amalga oshiriladi ?",
-            answer: "Hamkorligimiz teng sherikchilik yoki qisman sherikchilik asosida ikki taraf kelishgan holda amalga oshiriladi."
-        },
-        {
-            question: "Agar kiritilgan mablagni  qaytarib olishmoqchi bo'lsa tartibi qanday bo'ladi ?",
-            answer: "Kelishuvga asosan hamkorlikni to'xtatib mablag'ingizni qaytarib olishingiz mumkin."
-        },
-        {
-            question: "Foyda zarar qanday boladi ?",
-            answer: "Biz ishlab chiqarayotgan mahsulotimizni qarzga yoki nasiya savdoga sotmaganligimiz va ishlab chiqarayotgan mahsulotlarimizning muddati otadigan bo'lmagani uchun ham zarar ko'rish holatimiz kuzatilmaydi. Hozirgi kunda bozorda bizning mahsulotimizga talab yuqori bo'lganligi uchun biznesimizни kengaytirish maqsadida hamkorlik qilmoqchimiz."
-        },
-        {
-            question: "Hamkorlik qilish uchun nima qilish kerek ?",
-            answer: "Hamkorlik qilish uchun bizning ofisimizga va  fabrikamizga kelin va ishlab chiqarishimizni mahsulotimizga bozordagi talabni koring va bir qarorga kelasiz  va undan keyin xulosa qilsangiz boladi."
-        },
-        {
-            question: "Oʻzi tayyor yurib turgan biznes boʻlsa, hamkorlikdan maqsad nima ?",
-            answer: "Hamkorlikdan maqsad Viloyatlarda dillerlik sotuv offislari va shourumlarni tashkil qilish."
-        }
-    ];
-
-    const sugest: string[] = [
-        "Fabrikamizga kelib ishlab chiqarayotgan mahsulotlarimizni ko'ring.",
-        "Mahsulotimizga bo'lgan talabni ko'ring. Ish faoliyatimiz va fabrikamizni ko'rib xulosa qiling.",
-        "Sizga foydamizdan ulish beramiz. Bu degani halol biznes."
-    ]
+    const sugest = t("hisobot.sugest", { returnObjects: true }) as string[];
 
     const socialLinks = [
-        { title: "Ko'chma do'kon Instagrami", url: "https://www.instagram.com/kochma.dokon/" },
-        { title: "Kontainer City Instagrami", url: "https://www.instagram.com/kontainer_city.uz/" }
+        { title: t("hisobot.social.kochma_dokon"), url: "https://www.instagram.com/kochma.dokon/" },
+        { title: t("hisobot.social.kontainer_city"), url: "https://www.instagram.com/kontainer_city.uz/" }
     ];
 
     // Reusable components
     const SectionHeader = ({ children, className = "" }: any) => (
         <h2 className={`text-2xl md:text-3xl lg:text-4xl tracking-wide font-serif uppercase text-center mb-4 ${className}`}>
             {children}
-        </h2>  
+        </h2>
     );
 
     const InfoCard = ({ children, className = "" }: any) => (
@@ -97,13 +52,16 @@ const Hisobot = () => {
 
     return (
         <div className="min-h-screen bg-gradient-to-b from-slate-900 via-teal-900 to-slate-900">
-            <div className="container mx-auto py-2 md:py-4">
+            <div className="bg-gradient-to-br from-teal-900 via-teal-800 to-emerald-900">
+                <LanguageTabs />
+            </div>
+            <div className="container mx-auto">
                 <Card className="bg-gradient-to-br from-teal-900 via-teal-800 to-emerald-900 text-white shadow-2xl border-none overflow-hidden">
                     <CardHeader className="relative">
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent"></div>
                         <div className="relative z-10 text-center py-8 md:py-16">
                             <h1 className="text-3xl md:text-5xl lg:text-6xl font-serif leading-tight mb-4 bg-gradient-to-r from-yellow-300 via-yellow-100 to-yellow-300 bg-clip-text text-transparent">
-                                HAMKORLIK TIJORAT TAKLIFI
+                                {t("hisobot.titles.main")}
                             </h1>
                             <div className="w-24 h-1 bg-gradient-to-r from-yellow-400 to-emerald-400 mx-auto"></div>
                         </div>
@@ -112,67 +70,67 @@ const Hisobot = () => {
                     <CardContent className="space-y-8 md:space-y-12 p-6 md:p-10">
                         {/* Faoliyatimiz Section */}
                         <InfoCard>
-                            <SectionHeader className="text-yellow-300">BIZNING FAOLIYATIMIZ</SectionHeader>
+                            <SectionHeader className="text-yellow-300">{t("hisobot.titles.activities")}</SectionHeader>
                             <div className=" flex items-center flex-col space-y-5 text-center">
-                                <h3 className="tracking-wider font-serif font-semibold text-xl text-center uppercase mt-3">Bino - inshoatlar fabrikasi</h3>
+                                <h3 className="tracking-wider font-serif font-semibold text-xl text-center uppercase mt-3">{t("hisobot.titles.factory")}</h3>
                                 <div className="flex flex-col items-center gap-1 text-xl font-bold">
-                                    <p className="tracking-wider text-yellow-400">FAOLIYAT TURI:</p>
-                                    <h3>Yengil konstruksiyadan iborat.</h3>
+                                    <p className="tracking-wider text-yellow-400">{t("hisobot.titles.activity_type_label")}</p>
+                                    <h3>{t("hisobot.titles.activity_type_value")}</h3>
                                 </div>
                             </div>
                         </InfoCard>
 
                         {/* Maqsad Section */}
                         <InfoCard>
-                            <SectionHeader className="text-yellow-300 tracking-wide">Hamkorlik maqsadi</SectionHeader>
+                            <SectionHeader className="text-yellow-300 tracking-wide">{t("hisobot.titles.goal")}</SectionHeader>
                             <div className="text-center mb-10">
-                                <p className="text-lg md:text-xl font-bold text-white tracking-wider leading-relaxed">Viloyatlarda dillerlik sotuv ofislari va shourumlarni tashkil qilish orqali biznesni kengaytirish.</p>
+                                <p className="text-lg md:text-xl font-bold text-white tracking-wider leading-relaxed">{t("hisobot.titles.goal_desc")}</p>
                             </div>
                         </InfoCard>
 
                         <InfoCard>
-                            <SectionHeader className="text-yellow-300 tracking-wider">Hamkorlik daromadi</SectionHeader>
+                            <SectionHeader className="text-yellow-300 tracking-wider">{t("hisobot.titles.income")}</SectionHeader>
                             <div className="text-center mt-5">
                                 <div>
-                                    <p className="text-xl font-bold text-white tracking-wider">Yillik: 40-48% gacha</p>
-                                    <p className="text-xl font-bold text-white tracking-wider mt-4">Shartnoma muddati 1 yildan 3 yilgacha.</p>
-                                    <p className="text-xl font-bold text-white tracking-wider mt-4">Kelishuv 100% qonuniy shartnoma yoki notarius orqali tuziladi.</p>
+                                    <p className="text-xl font-bold text-white tracking-wider">{t("hisobot.titles.income_annual")}</p>
+                                    <p className="text-xl font-bold text-white tracking-wider mt-4">{t("hisobot.titles.contract_term")}</p>
+                                    <p className="text-xl font-bold text-white tracking-wider mt-4">{t("hisobot.titles.contract_legal")}</p>
                                 </div>
                             </div>
                         </InfoCard>
 
                         {/* Talab va Yo'nalishlar Section */}
                         <InfoCard>
-                            <SectionHeader className="text-yellow-300 tracking-wider">Respublika bo'ylab xizmat</SectionHeader>
+                            <SectionHeader className="text-yellow-300 tracking-wider">{t("hisobot.titles.service_republic")}</SectionHeader>
                             <div className="mt-6 space-y-8 text-white">
                                 <ListWithIcon items={activities} />
                             </div>
                         </InfoCard>
 
                         <InfoCard>
-                            <SectionHeader className="text-yellow-300 tracking-wider">Ishlab chiqarish yo'nalishlarimiz</SectionHeader>
+                            <SectionHeader className="text-yellow-300 tracking-wider">{t("hisobot.titles.production_directions")}</SectionHeader>
                             <div>
                                 <ListWithIcon items={directions} />
                             </div>
 
                             <div>
-                                <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif text-yellow-300 mb-4 text-center sm:text-left uppercase tracking-wider mt-8">Mahsulotlarga talab ko'p?</h3>
+                                <h3 className="text-2xl md:text-3xl lg:text-4xl font-serif text-yellow-300 mb-4 text-center sm:text-left uppercase tracking-wider mt-8">{t("hisobot.titles.demand_high")}</h3>
                                 <ListWithIcon items={advantages} iconSize="w-8 h-8" />
                             </div>
                         </InfoCard>
 
                         {/* ✅ KALKULYATOR Section — InvestmentCalculator import qilingan */}
                         <InfoCard>
-                            <SectionHeader className="text-yellow-300">HISOB KALKULYATORI</SectionHeader>
+                            <SectionHeader className="text-yellow-300">{t("hisobot.titles.calculator")}</SectionHeader>
                             <p className="text-center text-white text-base md:text-lg mb-6">
-                                Hamkorlik bo'yicha kiritmoqchi bo'lgan mablag'ingizni kiriting — oylik va yillik daromadingizni hisoblab ko'ring.
+                                {t("hisobot.titles.calculator_desc")}
                             </p>
                             <InvestmentCalculator />
                         </InfoCard>
 
                         {/* Savol-Javob Section */}
                         <InfoCard>
-                            <SectionHeader className="text-yellow-300">SAVOL - JAVOBLAR</SectionHeader>
+                            <SectionHeader className="text-yellow-300">{t("hisobot.titles.faqs")}</SectionHeader>
                             <div className="max-w-4xl mx-auto space-y-4">
                                 {faqs.map((faq, index) => (
                                     <div key={index} className="p-2">
@@ -197,9 +155,9 @@ const Hisobot = () => {
 
                         {/* Ijtimoiy tarmoqlar Section */}
                         <InfoCard className="bg-gradient-to-r from-purple-800 to-indigo-800">
-                            <SectionHeader className="text-yellow-300">BIZNING FAOLIYATIMIZ BILAN TANISHIB CHIQING</SectionHeader>
-                            <h3 className="font-medium text-md sm:text-lg flex gap-2 mb-4">IJTIMOIY TARMOQLARIMIZ <img src={icon} alt="insta" className="w-7 h-7" /></h3>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                            <SectionHeader className="text-yellow-300">{t("hisobot.titles.social_intro")}</SectionHeader>
+                            <h3 className="font-medium text-md sm:text-lg flex justify-center gap-2 mb-4">{t("hisobot.titles.social_networks")} <img src={icon} alt="insta" className="w-7 h-7" /></h3>
+                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {socialLinks.map((link, index) => (
                                     <a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-l from-blue-600 to-indigo-600 rounded-lg p-4 text-center font-semibold hover:scale-105 transition-transform">
                                         {link.title}
@@ -210,15 +168,15 @@ const Hisobot = () => {
 
                         {/* Manzil Section */}
                         <InfoCard>
-                            <SectionHeader className="text-yellow-300">BIZNING MANZILIMIZ</SectionHeader>
+                            <SectionHeader className="text-yellow-300">{t("hisobot.titles.address_title")}</SectionHeader>
                             <div className="text-lg font-semibold space-y-1 mb-6">
-                                <p>Toshkent shahar, Yangihayot tumani</p>
-                                <p>Metro: Turon bekat</p>
-                                <p>Mo'ljal: Imzo zavod ro'parasida</p>
+                                <p>{t("hisobot.titles.address_city")}</p>
+                                <p>{t("hisobot.titles.address_metro")}</p>
+                                <p>{t("hisobot.titles.address_landmark")}</p>
                             </div>
                             <div className="rounded-lg text-center bg-emerald-600 px-4 py-3">
                                 <a href="https://maps.app.goo.gl/SQLFe75gckdKrb4P9" target="_blank" rel="noopener noreferrer" className="text-xl font-semibold flex gap-2 items-center justify-center text-yellow-300">
-                                    <img src={icon8l} alt="loc" className="w-6 h-6" /> Lokatsiyamiz
+                                    <img src={icon8l} alt="loc" className="w-6 h-6" /> {t("hisobot.titles.location")}
                                 </a>
                             </div>
                         </InfoCard>
@@ -227,15 +185,17 @@ const Hisobot = () => {
                         <div className="text-center py-8">
                             <div className="bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 text-white rounded-2xl p-6 md:p-8 shadow-2xl space-y-6">
                                 <div>
-                                    <h3 className="text-xl md:text-3xl italic mb-2">Hamkorlik uchun quyidagi raqamga bog'laning:</h3>
-                                    <div className="bg-black/20 rounded-lg py-2">
-                                        <a href="tel:+998950107557" className="text-lg md:text-4xl font-medium">📞 +99895 010 75 57</a>
+                                    <h3 className="text-xl md:text-3xl italic mb-2">{t("hisobot.titles.contact_phone")}</h3>
+                                    <div className="bg-black/20 rounded-lg flex items-center justify-center gap-2 py-2">
+                                        <Phone />
+                                        <a href="tel:+998950107557" className="text-lg md:text-2xl font-medium">+99895 010 75 57</a>
                                     </div>
                                 </div>
                                 <div>
-                                    <h3 className="text-xl italic mb-2">Telegramdan yozib qoldiring:</h3>
-                                    <div className="bg-black/20 rounded-lg py-2">
-                                        <a href="https://t.me/Hamkorlik_010" className="font-bold text-lg">🤝 Telegram</a>
+                                    <h3 className="text-xl italic mb-2">{t("hisobot.titles.contact_telegram")}</h3>
+                                    <div className="bg-black/20 rounded-lg flex items-center justify-center gap-2 py-2">
+                                        <Send />
+                                        <a href="https://t.me/Hamkorlik_010" className="font-bold text-lg">{t("hisobot.titles.telegram")}</a>
                                     </div>
                                 </div>
                             </div>
