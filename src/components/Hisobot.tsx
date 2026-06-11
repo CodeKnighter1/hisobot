@@ -1,6 +1,5 @@
 import { Card, CardHeader, CardContent } from "@/components/ui/card";
 import icon8l from '@/images/icons8-location-48.png';
-import icon from '@/images/icons8-instagram-48.png';
 import correct from "@/images/icons8-correct-96 (3).png";
 import InvestmentCalculator from "./InvestmentCalculator";
 import { useTranslation } from "react-i18next";
@@ -20,11 +19,6 @@ const Hisobot = () => {
     const faqs = t("hisobot.faqs", { returnObjects: true }) as { question: string, answer: string }[];
 
     const sugest = t("hisobot.sugest", { returnObjects: true }) as string[];
-
-    const socialLinks = [
-        { title: t("hisobot.social.kochma_dokon"), url: "https://www.instagram.com/kochma.dokon/" },
-        { title: t("hisobot.social.kontainer_city"), url: "https://www.instagram.com/kontainer_city.uz/" }
-    ];
 
     // Reusable components
     const SectionHeader = ({ children, className = "" }: any) => (
@@ -149,19 +143,6 @@ const Hisobot = () => {
                                         {/* <img src={correct} alt="q" className="w-7 h-7 sm:w-9 sm:h-9 md:w-10 md:h-10 flex-shrink-0 mt-0.5" /> */}
                                         <p className="text-center text-lg font-bold text-white">{sugest}</p>
                                     </div>
-                                ))}
-                            </div>
-                        </InfoCard>
-
-                        {/* Ijtimoiy tarmoqlar Section */}
-                        <InfoCard className="bg-gradient-to-r from-purple-800 to-indigo-800">
-                            <SectionHeader className="text-yellow-300">{t("hisobot.titles.social_intro")}</SectionHeader>
-                            <h3 className="font-medium text-md sm:text-lg flex justify-center gap-2 mb-4">{t("hisobot.titles.social_networks")} <img src={icon} alt="insta" className="w-7 h-7" /></h3>
-                            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                {socialLinks.map((link, index) => (
-                                    <a key={index} href={link.url} target="_blank" rel="noopener noreferrer" className="bg-gradient-to-l from-blue-600 to-indigo-600 rounded-lg p-4 text-center font-semibold hover:scale-105 transition-transform">
-                                        {link.title}
-                                    </a>
                                 ))}
                             </div>
                         </InfoCard>
